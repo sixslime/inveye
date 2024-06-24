@@ -3,13 +3,15 @@
 # ./tick
 #--------------------
 
+advancement revoke @s only invi:_/inventory_change
 function pdata:api/self/get
 
 data modify storage six:in difference.a set from storage pdata:out get.result.storage.invi._.last_items
 data modify storage six:in difference.b set from entity @s Inventory
-function six:api/array/set/difference
 
-execute unless data storage six:out difference.unique_a[] unless data storage six:out difference.unique_b[] run return run data remove storage invi:var check
+execute store result score *check.diff --invi run function six:api/array/set/difference
+execute unless score *check.diff --invi matches 1.. run return run data remove storage invi:var check
+
 
 #-- HOOK : invi:inventory_change --
 data modify storage invi:hook inventory_change append value {}

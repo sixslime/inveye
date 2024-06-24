@@ -7,7 +7,12 @@
 --------------------
  ...
 --------------------
- - will trigger respective 'invi's load order.
+ - <added> contains ItemSlots that are present in the players inventory this tick, but were not present last tick.
+ - <removed> contains ItemSlots that were present last tick, but are not present this tick.
+ - example: a player uses an iron pickaxe that is in their first slot:
+    <added>: [{count:1, Slot:0b, id:"minecraft:iron_pickaxe", components:{"minecraft:damage":100}}]
+    <removed>: [{count:1, Slot:0b, id:"minecraft:iron_pickaxe", components:{"minecraft:damage":99}}]
+ - triggers with (tick) 'advancement' group of tick-order. (after ALL regular load/ticking functions)
 --------------------
 # APPEND
 --------------------

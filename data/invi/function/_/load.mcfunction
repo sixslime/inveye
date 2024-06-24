@@ -16,7 +16,3 @@ execute unless data storage invi:settings {PERSIST:true} run function invi:setti
 # scoreboards
 scoreboard objectives add -invi dummy
 scoreboard objectives add --invi dummy
-
-# tick
-schedule clear invi:_/tick
-function invi:_/tick
