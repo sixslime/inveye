@@ -1,5 +1,6 @@
 
 # Dependencies
 * six
+* pdata
 
 # Supports

@@ -1,12 +1,13 @@
 > #invi:hook > inventory_change
 --------------------
- * 
+ * when [player]'s inventory is different that it was last tick.
 --------------------
- -> 
+ -> added: ItemSlot[]
+ -> removed: ItemSlot[]
 --------------------
- <-> 
+ ...
 --------------------
- - 
+ - will trigger respective 'invi's load order.
 --------------------
 # APPEND
 --------------------
