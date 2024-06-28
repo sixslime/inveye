@@ -2,6 +2,7 @@
 --------------------
  * when [player]'s inventory is different that it was last tick.
 --------------------
+ [AS] [AT] player
  -> added: ItemSlot[]
  -> removed: ItemSlot[]
 --------------------
