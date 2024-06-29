@@ -8,6 +8,7 @@ function pdata:api/self/get
 
 data modify storage six:in difference.a set from storage pdata:out get.result.storage.invi._.last_items
 data modify storage six:in difference.b set from entity @s Inventory
+data remove storage six:in difference.b[{components:{"minecraft:custom_data":{__:true}}}]
 
 execute store result score *check.diff --invi run function six:api/array/set/difference
 execute unless score *check.diff --invi matches 1.. run return run data remove storage invi:var check
